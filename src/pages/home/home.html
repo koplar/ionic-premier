@@ -1,14 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      RS Premier Surabaya
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <img src='../../assets/imgs/logo.jpg'>
+  </ion-item>
+  
+  <ion-item>
+    <p>Pindai QRCode dari toko yang anda inginkan<br>dengan menekan tombol SCAN QRCODE  :</p>
+  </ion-item>
+
+  <br>
+
+  <button ion-button block icon-left (click)="scanQRCode()">
+    <ion-icon name="qr-scanner"></ion-icon>
+    Scan QRCode
+  </button>
+
+  <!-- Scan QR Code-->
+  <ion-card (click)="linkUrl()" *ngIf="scannedQrCode">
+    <ion-card-content >
+      <p>KLIK DISINI :<br> {{ scannedQrCode}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
