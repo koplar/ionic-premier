@@ -30,7 +30,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser'
     StatusBar,
     SplashScreen,
     BarcodeScanner,
-    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
