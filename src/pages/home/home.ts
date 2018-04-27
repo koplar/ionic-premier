@@ -8,7 +8,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser'
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers : [InAppBrowser]
 })
 export class HomePage {
   scannedQrCode = null;
